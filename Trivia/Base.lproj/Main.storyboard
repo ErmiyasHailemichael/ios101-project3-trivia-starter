@@ -1,8 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X9S-rh-lvk">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Trivia View Controller-->
+        <scene sceneID="vE6-Yc-DCe">
+            <objects>
+                <viewController id="X9S-rh-lvk" customClass="TriviaViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cUP-Ec-dyW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="K9r-09-JaF">
+                                <rect key="frame" x="109" y="74" width="175" height="627"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8G-sU-PQH">
+                                        <rect key="frame" x="48.666666666666664" y="0.0" width="77.666666666666686" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entertainment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KT4-m4-haU">
+                                        <rect key="frame" x="33.999999999999993" y="75.333333333333343" width="107.33333333333331" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Soh-Kf-skP">
+                                        <rect key="frame" x="0.0" y="150.66666666666666" width="175" height="174.99999999999997"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="175" id="C4s-4x-dDX"/>
+                                            <constraint firstAttribute="height" constant="175" id="q93-6A-7eR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKa-fy-9H7">
+                                        <rect key="frame" x="53.333333333333336" y="380.66666666666669" width="68.333333333333314" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqm-nl-F0a">
+                                        <rect key="frame" x="52.33333333333335" y="456" width="70.666666666666686" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-7d-RPs">
+                                        <rect key="frame" x="51.999999999999993" y="531.33333333333337" width="71.333333333333314" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-Xo-9RR">
+                                        <rect key="frame" x="51.999999999999993" y="606.66666666666663" width="71.333333333333314" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UJ9-8e-AY5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K9r-09-JaF" firstAttribute="centerX" secondItem="cUP-Ec-dyW" secondAttribute="centerX" id="E7f-1Z-xlL"/>
+                            <constraint firstItem="K9r-09-JaF" firstAttribute="top" secondItem="UJ9-8e-AY5" secondAttribute="top" constant="15" id="czf-1h-UUn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Question" destination="Q8G-sU-PQH" id="0gh-85-4by"/>
+                        <outlet property="categoryLable" destination="KT4-m4-haU" id="3ER-VV-lUl"/>
+                        <outlet property="choiceLable" destination="bqm-nl-F0a" id="Nwc-sM-rCD"/>
+                        <outlet property="choiceLable0" destination="bqm-nl-F0a" id="Ku7-Dj-ji6"/>
+                        <outlet property="choiceLable1" destination="oKa-fy-9H7" id="jKi-n6-Usr"/>
+                        <outlet property="choiceLable2" destination="bqm-nl-F0a" id="Im7-v2-bZ3"/>
+                        <outlet property="choiceLable3" destination="UF0-7d-RPs" id="s9u-Pc-XUS"/>
+                        <outlet property="choiceLable4" destination="5uh-Xo-9RR" id="AlO-hc-lId"/>
+                        <outlet property="questionLable" destination="Q8G-sU-PQH" id="Q6q-Pt-XNV"/>
+                        <outlet property="questionNumberLable" destination="Q8G-sU-PQH" id="Vhz-cu-mFC"/>
+                        <outlet property="triviaImageView" destination="Soh-Kf-skP" id="sEK-Yi-mh7"/>
+                        <outlet property="triviaimageview" destination="Soh-Kf-skP" id="cob-08-GOt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HmN-Ke-WOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40.458015267175568" y="-141.5492957746479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
