@@ -16,13 +16,67 @@ class TriviaViewController: UIViewController {
     @IBOutlet weak var triviaImageView: UIImageView!
     @IBOutlet weak var categoryLable: UILabel!
     @IBOutlet weak var questionNumberLable: UILabel!
+    
+    var triviaQuiz = Triviaquiz()
+    var currentQuestionIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
+    func displayQuestions() {
+        let currentQuestion = triviaQuiz.quizQuestions[currentQuestionIndex]
 
+                categoryLable.text = "Category: General Knowledge"
+                questionNumberLable.text = "Question \(currentQuestionIndex + 1): \(currentQuestion.question)"
+                choiceLable1.text = currentQuestion.choices[0]
+                choiceLable2.text = currentQuestion.choices[1]
+                choiceLable3.text = currentQuestion.choices[2]
+                choiceLable4.text = currentQuestion.choices[3]
+    }
+
+    @IBAction func choiceLabelTapped(_ sender: UITapGestureRecognizer) {
+       
+        guard let tappedLabel = sender.view as? UILabel else { return }
+
+        
+        if tappedLabel == choiceLable1 {
+            handleChoiceSelection(index: 0)
+        } else if tappedLabel == choiceLable2 {
+            handleChoiceSelection(index: 1)
+        } else if tappedLabel == choiceLable3 {
+            handleChoiceSelection(index: 2)
+        } else if tappedLabel == choiceLable4 {
+            handleChoiceSelection(index: 3)
+        }
+    }
+
+    func handleChoiceSelection(index: Int) {
+        guard currentQuestionIndex < triviaQuiz.quizQuestions.count else {
+                    print("Quiz completed!")
+                    return
+                }
+
+                let currentQuestion = triviaQuiz.quizQuestions[currentQuestionIndex]
+
+                if index == currentQuestion.correctAnswer.rawValue {
+                    print("Correct Answer")
+                } else {
+                    print("Wrong Answer")
+                }
+
+                currentQuestionIndex += 1
+
+                if currentQuestionIndex < triviaQuiz.quizQuestions.count {
+                    displayQuestions()
+                } else {
+                    print("Quiz completed!")
+                }
+            }
     /*
     // MARK: - Navigation
 
@@ -34,3 +88,4 @@ class TriviaViewController: UIViewController {
     */
 
 }
+

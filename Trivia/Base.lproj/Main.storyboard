@@ -74,18 +74,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Question" destination="Q8G-sU-PQH" id="0gh-85-4by"/>
                         <outlet property="categoryLable" destination="KT4-m4-haU" id="3ER-VV-lUl"/>
-                        <outlet property="choiceLable" destination="bqm-nl-F0a" id="Nwc-sM-rCD"/>
-                        <outlet property="choiceLable0" destination="bqm-nl-F0a" id="Ku7-Dj-ji6"/>
                         <outlet property="choiceLable1" destination="oKa-fy-9H7" id="jKi-n6-Usr"/>
                         <outlet property="choiceLable2" destination="bqm-nl-F0a" id="Im7-v2-bZ3"/>
                         <outlet property="choiceLable3" destination="UF0-7d-RPs" id="s9u-Pc-XUS"/>
                         <outlet property="choiceLable4" destination="5uh-Xo-9RR" id="AlO-hc-lId"/>
-                        <outlet property="questionLable" destination="Q8G-sU-PQH" id="Q6q-Pt-XNV"/>
                         <outlet property="questionNumberLable" destination="Q8G-sU-PQH" id="Vhz-cu-mFC"/>
                         <outlet property="triviaImageView" destination="Soh-Kf-skP" id="sEK-Yi-mh7"/>
-                        <outlet property="triviaimageview" destination="Soh-Kf-skP" id="cob-08-GOt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HmN-Ke-WOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
