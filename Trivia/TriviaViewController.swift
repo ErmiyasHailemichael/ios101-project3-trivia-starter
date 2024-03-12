@@ -87,7 +87,7 @@ class TriviaViewController: UIViewController {
 
 
     func imageFromText(text: String) -> UIImage? {
-        let font = UIFont.systemFont(ofSize: 18)
+        let font = UIFont.systemFont(ofSize: 30)
         let size = CGSize(width: 300, height: 200)
         let renderer = UIGraphicsImageRenderer(size: size)
 
@@ -141,11 +141,16 @@ class TriviaViewController: UIViewController {
             let alertController = UIAlertController(title: "Game Over", message: resultString, preferredStyle: .alert)
 
             let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-
+                       
+            self.restartGame()
             }
 
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
+                }
+    func restartGame() {
+            currentQuestionIndex = 0
+            setupUIForCurrentQuestion()
         }
 
 }
