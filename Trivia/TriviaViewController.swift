@@ -26,11 +26,11 @@ class TriviaViewController: UIViewController {
         super.viewDidLoad()
 
         let question1 = TriviaQuestion(
-                question: "What is the capital of France?",
-                choices: ["Berlin", "Madrid", "Paris", "Rome"],
+                question: "What occasion corresponds to the longest day of the year?",
+                choices: ["pring Equinox", "Autumnal Equinox", "The summer solstice", "Winter Solstice"],
                 correctAnswerIndex: 2,
-                category: "Geography",
-                imageName: "eiffel_tower"
+                category: "Astronomy",
+                imageName: "Astronomy"
             )
 
             let question2 = TriviaQuestion(
@@ -73,7 +73,6 @@ class TriviaViewController: UIViewController {
     func setupUIForCurrentQuestion() {
         let currentQuestion = triviaQuestions[currentQuestionIndex]
 
-        // Assuming triviaImageView is the IBOutlet for the UIImageView
         triviaImageView.image = imageFromText(text: currentQuestion.question)
 
         choice1.setTitle(currentQuestion.choices[0], for: .normal)
@@ -89,7 +88,7 @@ class TriviaViewController: UIViewController {
 
     func imageFromText(text: String) -> UIImage? {
         let font = UIFont.systemFont(ofSize: 18)
-        let size = CGSize(width: 300, height: 200) // Adjust the size as needed
+        let size = CGSize(width: 300, height: 200)
         let renderer = UIGraphicsImageRenderer(size: size)
 
         let image = renderer.image { context in
@@ -118,35 +117,31 @@ class TriviaViewController: UIViewController {
         print("Selected choice index: \(selectedChoiceIndex)")
         print("Correct answer index: \(currentQuestion.correctAnswerIndex)")
 
-        // Check if the selected choice is correct and handle accordingly
         if selectedChoiceIndex == currentQuestion.correctAnswerIndex {
             print("Correct!")
-            // Handle correct answer if needed
+
         } else {
             print("Incorrect!")
-            // Handle incorrect answer if needed
+
         }
 
-        // Move to the next question
         currentQuestionIndex += 1
 
         if currentQuestionIndex < triviaQuestions.count {
-            // If there are more questions, set up the UI for the next question
+            
             setupUIForCurrentQuestion()
         } else {
-            // End of trivia quiz, display result
+            
             showResultAlert()
         }
     }
-
-
 
         func showResultAlert() {
             let resultString = "Game Over!\nYou've completed the quiz."
             let alertController = UIAlertController(title: "Game Over", message: resultString, preferredStyle: .alert)
 
             let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                // Handle OK action if needed
+
             }
 
             alertController.addAction(okAction)
