@@ -9,7 +9,7 @@ import UIKit
 
 class TriviaViewController: UIViewController {
 
-   
+    
     @IBOutlet weak var choice4: UIButton!
     @IBOutlet weak var choice3: UIButton!
     @IBOutlet weak var choice2: UIButton!
@@ -18,9 +18,9 @@ class TriviaViewController: UIViewController {
     @IBOutlet weak var categoryLable: UILabel!
     @IBOutlet weak var questionNumberLable: UILabel!
     
-
     var triviaQuestions: [TriviaQuestion] = []
     var currentQuestionIndex = 0
+    var userScore = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,15 +73,15 @@ class TriviaViewController: UIViewController {
     func setupUIForCurrentQuestion() {
         let currentQuestion = triviaQuestions[currentQuestionIndex]
 
-        triviaImageView.image = imageFromText(text: currentQuestion.question)
+            triviaImageView.image = imageFromText(text: currentQuestion.question)
 
-        choice1.setTitle(currentQuestion.choices[0], for: .normal)
-        choice2.setTitle(currentQuestion.choices[1], for: .normal)
-        choice3.setTitle(currentQuestion.choices[2], for: .normal)
-        choice4.setTitle(currentQuestion.choices[3], for: .normal)
+            choice1.setTitle(currentQuestion.choices[0], for: .normal)
+            choice2.setTitle(currentQuestion.choices[1], for: .normal)
+            choice3.setTitle(currentQuestion.choices[2], for: .normal)
+            choice4.setTitle(currentQuestion.choices[3], for: .normal)
 
-        categoryLable.text = currentQuestion.category
-        questionNumberLable.text = "Question \(currentQuestionIndex + 1)"
+            categoryLable.text = currentQuestion.category
+            questionNumberLable.text = "Question \(currentQuestionIndex + 1) of \(triviaQuestions.count)"
     }
 
 
@@ -119,6 +119,7 @@ class TriviaViewController: UIViewController {
 
         if selectedChoiceIndex == currentQuestion.correctAnswerIndex {
             print("Correct!")
+            userScore += 1
 
         } else {
             print("Incorrect!")
