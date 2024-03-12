@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="K9r-09-JaF">
-                                <rect key="frame" x="109" y="74" width="175" height="627"/>
+                                <rect key="frame" x="109" y="74" width="175" height="683"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8G-sU-PQH">
                                         <rect key="frame" x="48.666666666666664" y="0.0" width="77.666666666666686" height="20.333333333333332"/>
@@ -39,30 +39,38 @@
                                             <constraint firstAttribute="height" constant="175" id="q93-6A-7eR"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKa-fy-9H7">
-                                        <rect key="frame" x="53.333333333333336" y="380.66666666666669" width="68.333333333333314" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqm-nl-F0a">
-                                        <rect key="frame" x="52.33333333333335" y="456" width="70.666666666666686" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-7d-RPs">
-                                        <rect key="frame" x="51.999999999999993" y="531.33333333333337" width="71.333333333333314" height="20.333333333333371"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-Xo-9RR">
-                                        <rect key="frame" x="51.999999999999993" y="606.66666666666663" width="71.333333333333314" height="20.333333333333371"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0R4-pO-QAP">
+                                        <rect key="frame" x="45.33333333333335" y="380.66666666666669" width="84.666666666666686" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Choice1"/>
+                                        <connections>
+                                            <action selector="choiceButtonTapped:" destination="X9S-rh-lvk" eventType="touchUpInside" id="vGE-A5-KLN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMs-To-Mbm">
+                                        <rect key="frame" x="44" y="470" width="87" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Choice2"/>
+                                        <connections>
+                                            <action selector="choiceButtonTapped:" destination="X9S-rh-lvk" eventType="touchUpInside" id="3nM-0a-EC1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6m-wr-cTe">
+                                        <rect key="frame" x="43.999999999999993" y="559.33333333333337" width="87.333333333333314" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Choice3"/>
+                                        <connections>
+                                            <action selector="choiceButtonTapped:" destination="X9S-rh-lvk" eventType="touchUpInside" id="TSv-S2-dPr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGr-9l-hCC">
+                                        <rect key="frame" x="43.666666666666664" y="648.66666666666663" width="87.666666666666686" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Choice4"/>
+                                        <connections>
+                                            <action selector="choiceButtonTapped:" destination="X9S-rh-lvk" eventType="touchUpInside" id="aBw-7b-Rxr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -75,10 +83,10 @@
                     </view>
                     <connections>
                         <outlet property="categoryLable" destination="KT4-m4-haU" id="3ER-VV-lUl"/>
-                        <outlet property="choiceLable1" destination="oKa-fy-9H7" id="jKi-n6-Usr"/>
-                        <outlet property="choiceLable2" destination="bqm-nl-F0a" id="Im7-v2-bZ3"/>
-                        <outlet property="choiceLable3" destination="UF0-7d-RPs" id="s9u-Pc-XUS"/>
-                        <outlet property="choiceLable4" destination="5uh-Xo-9RR" id="AlO-hc-lId"/>
+                        <outlet property="choice1" destination="0R4-pO-QAP" id="Hh4-6c-BwO"/>
+                        <outlet property="choice2" destination="GMs-To-Mbm" id="3ZA-aB-0qH"/>
+                        <outlet property="choice3" destination="l6m-wr-cTe" id="UFC-kb-ccF"/>
+                        <outlet property="choice4" destination="FGr-9l-hCC" id="7A9-bf-ZN9"/>
                         <outlet property="questionNumberLable" destination="Q8G-sU-PQH" id="Vhz-cu-mFC"/>
                         <outlet property="triviaImageView" destination="Soh-Kf-skP" id="sEK-Yi-mh7"/>
                     </connections>
