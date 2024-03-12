@@ -138,7 +138,7 @@ class TriviaViewController: UIViewController {
     }
 
         func showResultAlert() {
-            let resultString = "Game Over!\nYou've completed the quiz."
+            let resultString = "Game Over!\nYou've completed the quiz.\nYour score: \(userScore)/\(triviaQuestions.count)"
             let alertController = UIAlertController(title: "Game Over", message: resultString, preferredStyle: .alert)
 
             let okAction = UIAlertAction(title: "OK", style: .default) { _ in
